@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li{
+    list-style-type: none;
+}
+@font-face {
+  font-family: "caroline";
+  src: url("../fonts/caroline.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "ballpark";
+  src: url("../fonts/ballpark.eot") format("eot"),
+    url("../fonts/ballpark.woff") format("woff"),
+    url("../fonts/ballpark.ttf") format("truetype"),
+    url("../fonts/ballpark.svg") format("svg");
+}
+
+@font-face {
+  font-family: "dayrom";
+  src: url("../fonts/dayrom.eot") format("eot"),
+    url("../fonts/dayrom.svg") format("svg"),
+    url("../fonts/dayrom.ttf") format("truetype"),
+    url("../fonts/dayrom.woff") format("woff");
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ddcece;
+  padding: 5px 1em;
+  border-bottom: 1px solid #e7e7e7;
+  span {
+    font-weight: 600;
+  }
+}
+
+header {
+  position: relative;
+  nav h4 {
+    font-family: "caroline", sans-serif;
+    text-transform: capitalize;
+    font-size: 1.6em;
+  }
+  div:last-child h1 {
+    position: absolute;
+    color: #ddcece;
+    font-size: 5.2em;
+    bottom: 4%;
+    left: 4%;
+    width: 30%;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 1em;
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 1em;
+  }
+}
+main {
+  display: grid;
+  grid-template-columns:1fr 8fr 3fr;
+  grid-template-rows: 1fr;
+  margin:1.5em;
+  #title-service{
+    font-family: "caroline", sans-serif;
+    text-transform: capitalize;
+    font-size: 2.6em;
+    writing-mode: vertical-lr;
+  }
+  .services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 1em 0.2em;
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1em;
+      gap: 0.5em;
+        border: 1px solid #ddcece;
+      border-radius: 10px;
+      background-color: #ddcece;
+      height: 14em;
+      width: 20em;
+    }
+  }
+  aside {
+    h4{
+        font-family: "caroline", sans-serif;
+        text-transform: capitalize;
+        font-size: 2.6em;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content:center ;
+  padding: 1em;
+  gap: 1.5em;
+  background-color: #ddcece;
+  border-top: 1px solid #e7e7e7;
+.footer-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0 1em;
+    span {
+      font-family: "dayrom", sans-serif;
+      font-size: 1.2em;
+      color: #e7e7e7;
+    }
+  }
+  .social-media,.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+  }
+  h4{
+    text-align: center;
+  }
+  .footer-bottom{
+    align-self:flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 1em;
+    #title-service{
+      writing-mode: horizontal-tb;
+      font-size: 2em;
+    }
+    .services {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto;
+      gap: 0.5em;
+    }
+  }
+}
+@media (max-width: 480px) {
+  header {
+    nav h4 {
+      font-size: 1.2em;
+    }
+    div:last-child h1 {
+      font-size: 3em;
+      bottom: 10%;
+      left: 10%;
+      width: 50%;
+    }
+  }
+  main {
+    #title-service{
+      font-size: 1.5em;
+    }
+    .services {
+      .service-card {
+        height: auto;
+        width: auto;
+        padding: 0.5em;
+        gap: 0.2em;
+      }
+    }
+  }
+}
+  footer {
+    .footer-content{
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5em;
+    }
+    .social-media,.contact-info {
+      align-items: center;
+    }
+  }
+}
