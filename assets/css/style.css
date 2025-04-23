@@ -119,7 +119,7 @@ footer {
   display: flex;
   flex-direction:column;
   align-items: center;
-  justify-content:center ;
+  justify-content:space-around ;
   padding: 1em;
   gap: 1.5em;
   background-color: #ddcece;
@@ -192,7 +192,7 @@ footer {
     }
   }
 }
-  footer {
+  /* footer {
     .footer-content{
       flex-direction: column;
       align-items: center;
@@ -201,5 +201,5 @@ footer {
     .social-media,.contact-info {
       align-items: center;
     }
-  }
-}
+  } */
+
